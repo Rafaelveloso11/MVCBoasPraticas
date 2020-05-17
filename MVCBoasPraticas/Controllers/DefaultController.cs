@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace MVCBoasPraticas.Controllers
 {
-    public class HomeController : Controller
+    public class DefaultController : Controller
     {
-        // GET: Home
+        // GET: Default
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Contatos()
         {
             return View();
         }

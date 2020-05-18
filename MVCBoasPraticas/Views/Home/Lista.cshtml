@@ -1,0 +1,27 @@
+﻿    @model MVCBoasPraticas.Models.Pessoa
+    @{
+        ViewBag.Title = "Lista";
+    }
+
+    <h2>Lista</h2>
+
+    <div>
+        @Html.LabelFor(x => x.PessoaId)
+    </div>
+    <div>
+        @Model.PessoaId
+    </div>
+    <div>
+        @Html.LabelFor(x => x.Nome)
+    </div>
+    <div>
+        @Model.Nome
+    </div>
+    <div>
+        @Html.LabelFor(x => x.Tipo)
+    </div>
+    <div>
+      @Model.Tipo
+    </div>
+
+    @Html.ActionLink("Voltar","Index","Home")

@@ -1,4 +1,5 @@
-﻿
+﻿@model MVCBoasPraticas.Models.Pessoa
+
 @{
     ViewBag.Title = "Index";
 }
@@ -6,4 +7,48 @@
 <h2>Boas Práticas MVC</h2>
 
 <p>Rafael Veloso</p>
+<br />
+
+@*<p>@ViewData["PessoaId"]</p>
+    <p>@ViewData["Nome"]</p>
+    <p>@ViewData["Tipo"]</p>*@
+
+@*<p>@ViewBag.Id</p>
+    <p>@ViewBag.Nome</p>
+    <p>@ViewBag.Tipo</p>*@
+
+@*<p>@Model.PessoaId</p>
+    <p>@Model.Nome</p>
+    <p>@Model.Tipo</p>*@
+<div class="container">
+    @using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+    {
+        <fieldset>
+            <legend>Informações de Pessoas</legend>
+        </fieldset>
+        <div>
+            @Html.LabelFor(x => x.PessoaId)
+        </div>
+        <div>
+            @Html.EditorFor(x => x.PessoaId)
+            
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Nome)
+        </div>
+        <div>
+           
+            @Html.EditorFor(x => x.Nome)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Tipo)
+        </div>
+        <div>
+            @Html.EditorFor(x => x.Tipo)
+     
+        </div>
+        <p><input type="submit" value="Enviar"></p>
+    }
+</div>
+
 
